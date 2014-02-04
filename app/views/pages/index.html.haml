@@ -1,0 +1,125 @@
+.content
+  .side
+    -#.episode_views
+      View:
+      %span.view
+        %img{alt: "Full", height: "10", src: "/assets/views/full-0788b5fc76d8a1d653004ad44fbf31e5.png", width: "15"}/
+      %span.view
+        %a{href: "/?view=list", title: "List View"}
+          %img{alt: "List", height: "10", src: "/assets/views/list-f3b69d30cdb1ef80b12126c5dbd3fc7a.png", width: "14"}/
+      %span.view
+        %a{href: "/?view=grid", title: "Grid View"}
+          %img{alt: "Grid", height: "10", src: "/assets/views/grid-119e56c5d75467c317c16c5c6fef94da.png", width: "11"}/
+    -#.search_option
+      %h2 Types
+      %ul
+        %li
+          %a{href: "/?type=free"} Free Episodes
+        %li
+          %a{href: "/?type=pro"} Pro Episodes
+        %li
+          %a{href: "/?type=revised"} Revised Episodes
+    -#.search_option
+      %h2 Categories
+      %ul
+        %li
+          %a{href: "/?tag_id=2"} Active Record
+        %li
+          %a{href: "/?tag_id=19"} Active Resource
+        %li
+          %a{href: "/?tag_id=3"} Active Support
+        %li
+          %a{href: "/?tag_id=9"} Administration
+        %li
+          %a{href: "/?tag_id=11"} Ajax
+        %li
+          %a{href: "/?tag_id=37"} APIs
+        %li
+          %a{href: "/?tag_id=25"} Authentication
+        %li
+          %a{href: "/?tag_id=26"} Authorization
+        %li
+          %a{href: "/?tag_id=32"} Background Jobs
+        %li
+          %a{href: "/?tag_id=18"} Caching
+        %li
+          %a{href: "/?tag_id=39"} Code Walkthrough
+        %li
+          %a{href: "/?tag_id=8"} Controllers
+        %li
+          %a{href: "/?tag_id=10"} Debugging
+        %li
+          %a{href: "/?tag_id=21"} Deployment
+        %li
+          %a{href: "/?tag_id=23"} eCommerce
+        %li
+          %a{href: "/?tag_id=15"} Forms
+        %li
+          %a{href: "/?tag_id=28"} Mailing
+        %li
+          %a{href: "/?tag_id=16"} Models
+        %li
+          %a{href: "/?tag_id=1"} Performance
+        %li
+          %a{href: "/?tag_id=13"} Plugins
+        %li
+          %a{href: "/?tag_id=33"} Production
+        %li
+          %a{href: "/?tag_id=35"} Rack
+        %li
+          %a{href: "/?tag_id=17"} Rails 2.0
+        %li
+          %a{href: "/?tag_id=20"} Rails 2.1
+        %li
+          %a{href: "/?tag_id=22"} Rails 2.2
+        %li
+          %a{href: "/?tag_id=24"} Rails 2.3
+        %li
+          %a{href: "/?tag_id=27"} Rails 3.0
+        %li
+          %a{href: "/?tag_id=31"} Rails 3.1
+        %li
+          %a{href: "/?tag_id=34"} Rails 3.2
+        %li
+          %a{href: "/?tag_id=38"} Rails 4.0
+        %li
+          %a{href: "/?tag_id=6"} Refactoring
+        %li
+          %a{href: "/?tag_id=14"} Routing
+        %li
+          %a{href: "/?tag_id=30"} Search
+        %li
+          %a{href: "/?tag_id=5"} Security
+        %li
+          %a{href: "/?tag_id=7"} Testing
+        %li
+          %a{href: "/?tag_id=12"} Tools
+        %li
+          %a{href: "/?tag_id=4"} Views
+    -#.banner
+      %a{href: "https://www.digitalocean.com/?utm_source=railscasts.com"}
+        %img{alt: "Digital Ocean", src: "/static/sponsors/digitalocean.png"}/
+  .episodes
+    .full
+      #episode_1.episode
+        .screenshot
+          %a{href: "/episodes/1-foundation"}
+            %img{alt: "Foundation", height: "125", src: "/static/episodes/stills/417-foundation.png", width: "200"}/
+        .main
+          .info
+            %span.number Episode #417
+            \–
+            %span.published_at Jun 16, 2013
+            \–
+            %span.comments
+              %a{href: "/episodes/417-foundation?view=comments"} 58 comments
+          %h2
+            %a{href: "/episodes/417-foundation"} Foundation
+          .description
+            ZURB's Foundation is a front-end for quickly building applications and prototypes. It is similar to Twitter Bootstrap but uses Sass instead of LESS. Here you will learn the basics of the grid system, navigation, tooltips and more.
+            %span.stats (11 minutes)
+          .watch
+            %a.pretty_button{href: "/episodes/417-foundation?autoplay=true"} Watch Episode
+            %a.pretty_button.read_button{href: "/episodes/417-foundation?view=asciicast"} Read Episode
+        .clear
+

@@ -1,0 +1,70 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title Sprechensiescience
+    %meta{content: "", name: "description"}/
+    %meta{content: "", name: "keywords"}/
+    %script{src: "http://cdn.sublimevideo.net/js/3s7oes9q.js", type: "text/javascript"}
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    #top
+      .logo
+        = link_to root_path do
+          %img{alt: "Sprechensiescience - Screencasts", height: "56", src: "/assets/logo.png", width: "423"}/
+      -#%ul.subscribe.horizontal
+        %li
+          %a{href: "http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=218282043"}
+            %img{alt: "Itunes", height: "34", src: "/assets/icons/itunes-ea9253b9b183d9788bef2cdfe326f38e.png", width: "34"}/
+          %span.name watch on iTunes
+        %li
+          %a{href: "http://twitter.com/railscasts"}
+            %img{alt: "Twitter", height: "34", src: "/assets/icons/twitter-f0259ab802804e09139fb29f47678b2c.png", width: "34"}/
+          %span.name follow on Twitter
+        %li
+          %a{href: "http://www.facebook.com/pages/railscasts/197415140659"}
+            %img{alt: "Facebook", height: "34", src: "/assets/icons/facebook-0ab869e74b54d9c58f33c1c75264d869.png", width: "34"}/
+          %span.name follow on Facebook
+        %li
+          %a{href: "http://feeds.feedburner.com/railscasts"}
+            %img{alt: "Rss", height: "34", src: "/assets/icons/rss-04cb962054caa957a6fa3924c48594d8.png", width: "34"}/
+          %span.name subscribe to RSS feed
+    -#nav_bar
+      %ul.nav.horizontal
+        %li Browse Episodes
+        %li
+          %a{href: "/pro"} RailsCasts Pro
+        %li
+          %a{href: "/notifications"} Notifications
+        %li
+          %a{href: "/about"} About
+        %li
+          %a{href: "/feedback"} Feedback
+      %form{"accept-charset" => "UTF-8", action: "http://railscasts.com/episodes", method: "get"}
+        %div{style: "margin:0;padding:0;display:inline"}
+          %input{name: "utf8", type: "hidden", value: "✓"}/
+        %input#search{name: "search", size: "35", type: "text"}/
+        %input{type: "submit", value: "Search Episodes"}/
+    #announcement_banner
+      %p Please read for an updated status on SprechenSieScience:
+    #main
+      = yield
+    #footer
+      .inner
+        \©2013 - #{Date.today.year } SprechenSieScience -
+        = link_to 'Privacy Policy', privacy_path
+        \- Hosted by
+        %a{href: "http://www.circletechfl.com", :target => '_blank'} Circle Tech Fl
+    / Google Analytics
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-47768928-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
