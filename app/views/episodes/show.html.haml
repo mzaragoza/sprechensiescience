@@ -1,0 +1,15 @@
+#main
+  #episode
+    %iframe{allowfullscreen: "", frameborder: "0", height: "720", src: "#{episode.video}", width: "960"}
+    .info
+      .screenshot
+        = link_to episode_path(episode.id, :autoplay => true) do 
+          %img{alt: episode.name, height: "125", src: "/episodes/#{episode.icon}", width: "200"}/
+      %h1
+        %span.position # #{episode.id}
+        = episode.name
+      .description= episode.description
+      .watch
+        = link_to episode_path(episode.id, :autoplay => true), class: 'play_video pretty_button' do
+          Click to Play Video ▶
+      .social
