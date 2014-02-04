@@ -101,25 +101,22 @@
         %img{alt: "Digital Ocean", src: "/static/sponsors/digitalocean.png"}/
   .episodes
     .full
-      #episode_1.episode
-        .screenshot
-          %a{href: "/episodes/1-foundation"}
-            %img{alt: "Foundation", height: "125", src: "/static/episodes/stills/417-foundation.png", width: "200"}/
-        .main
-          .info
-            %span.number Episode #417
-            \–
-            %span.published_at Jun 16, 2013
-            \–
-            %span.comments
-              %a{href: "/episodes/417-foundation?view=comments"} 58 comments
-          %h2
-            %a{href: "/episodes/417-foundation"} Foundation
-          .description
-            ZURB's Foundation is a front-end for quickly building applications and prototypes. It is similar to Twitter Bootstrap but uses Sass instead of LESS. Here you will learn the basics of the grid system, navigation, tooltips and more.
-            %span.stats (11 minutes)
-          .watch
-            %a.pretty_button{href: "/episodes/417-foundation?autoplay=true"} Watch Episode
-            %a.pretty_button.read_button{href: "/episodes/417-foundation?view=asciicast"} Read Episode
-        .clear
+      - episodes.each do |e|
+        .episode{id: "episode_#{e.id}"}
+          .screenshot
+            = link_to episode_path(e.id) do
+              %img{alt: "Foundation", height: "125", src: "/episodes/#{e.icon}", width: "200"}/
+          .main
+            .info
+              %span.number Episode # #{e.id}
+              \–
+              %span.published_at= e.created_at.strftime('%D')
+            %h2
+              = link_to episode_path(e.id) do
+                = e.name.titleize
+            .description
+              = e.description
+            .watch
+              =  link_to 'Watch Episode', episode_path(e.id), class: 'pretty_button'
+          .clear
 
